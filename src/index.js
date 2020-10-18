@@ -80,9 +80,8 @@ const decodeTable = {
 function decode(expr) {
     var result = '';
     for (var i=0; i<expr.length/10; i++) {
-        const x = expr.substring(i*10, (i+1)*10);
-        const y = decodeTable[x];
-        result += y;
+        const x = decodeTable[expr.substring(i*10, (i+1)*10)];
+        result += x;
     }
 return result;
 
